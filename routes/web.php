@@ -79,4 +79,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::resource('tournaments', 'Admin\TournamentsController');
     Route::resource('products', 'Admin\ProductsController');
     Route::resource('product_subpages', 'Admin\ProductSubpagesController');
+    Route::resource('product_files', 'Admin\ProductFilesController');
+    Route::get('product_files_test_download/{id}', ['uses' => 'Admin\ProductFilesController@testDownload', 'as' => 'product_files.test_download']);
+    Route::post('product_files_mass_destroy', ['uses' => 'Admin\ProductFilesController@massDestroy', 'as' => 'product_files.mass_destroy']);
+    Route::post('product_files_restore/{id}', ['uses' => 'Admin\ProductFilesController@restore', 'as' => 'product_files.restore']);
+    Route::delete('product_files_perma_del/{id}', ['uses' => 'Admin\ProductFilesController@perma_del', 'as' => 'product_files.perma_del']);
 });

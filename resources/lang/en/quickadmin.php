@@ -147,6 +147,16 @@ return [
 		],
 	],
 
+	'product_files' => [
+		'title' => 'Product files',
+		'fields' => [
+			'product' => 'Product',
+			'title' => 'Title',
+			'filename' => 'Name of file (in storage/app/protected)',
+			'position' => 'Position'
+		],
+	],
+
 	'qa_create' => 'Create',
 	'qa_save' => 'Save',
 	'qa_edit' => 'Edit',

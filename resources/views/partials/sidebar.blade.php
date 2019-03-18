@@ -139,6 +139,12 @@
                             <span>@lang('quickadmin.product_subpages.title')</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('admin.product_files.index') }}">
+                            <i class="fa fa-calendar-day"></i>
+                            <span>@lang('quickadmin.product_files.title')</span>
+                        </a>
+                    </li>
                 </ul>
             </li>@endcan
 
